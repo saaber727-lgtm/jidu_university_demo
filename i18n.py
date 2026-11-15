@@ -1,0 +1,218 @@
+"""Interfeys matnlari: o‘zbek, rus va ingliz tillarida."""
+
+LANGS = {"uz": "🇺🇿 O‘zbekcha", "ru": "🇷🇺 Русский", "en": "🇬🇧 English"}
+_IDX = {"uz": 0, "ru": 1, "en": 2}
+
+_T = {
+    # ---- Umumiy / brending
+    "uni_name": ("Jahon iqtisodiyoti va diplomatiya universiteti",
+                 "Университет мировой экономики и дипломатии",
+                 "University of World Economy and Diplomacy"),
+    "uni_short": ("JIDU", "УМЭД", "UWED"),
+    "country_line": ("O‘zbekiston Respublikasi · Toshkent · 1992-yildan",
+                     "Республика Узбекистан · Ташкент · с 1992 года",
+                     "Republic of Uzbekistan · Tashkent · Since 1992"),
+    "portal_name": ("Raqamli universitet portali", "Цифровой портал университета", "Digital University Portal"),
+    "portal_tag": ("Talaba kabineti va ma’muriyat paneli", "Кабинет студента и панель администрации",
+                   "Student portal and administration"),
+    "address": ("Toshkent shahri, Mustaqillik shoh ko‘chasi, 54", "г. Ташкент, проспект Мустакиллик, 54",
+                "54 Mustaqillik Avenue, Tashkent"),
+    "footer_demo": ("Demo versiya · ma’lumotlar namuna sifatida kiritilgan",
+                    "Демо-версия · данные носят ознакомительный характер",
+                    "Demo version · sample data only"),
+
+    "photo_credit": ("Surat: JIDU majlislar zali, AQShning O‘zbekistondagi elchixonasi",
+                     "Фото: актовый зал УМЭД, Посольство США в Узбекистане",
+                     "Photo: UWED assembly hall, U.S. Embassy in Uzbekistan"),
+
+    # ---- Bosh sahifa
+    "about_title": ("Universitet haqida", "Об университете", "About the University"),
+    "about_text": (
+        "Jahon iqtisodiyoti va diplomatiya universiteti (JIDU) 1992-yilda tashkil etilgan bo‘lib, xalqaro munosabatlar, "
+        "xalqaro huquq va jahon iqtisodiyoti sohalarida mutaxassislar tayyorlaydigan O‘zbekistonning yetakchi oliy "
+        "ta’lim muassasalaridan biridir. Ushbu portal orqali talabalar fanlari, dars jadvali va baholarini ko‘radi, "
+        "ma’muriyat esa o‘quv jarayonini boshqaradi.",
+        "Университет мировой экономики и дипломатии (УМЭД) основан в 1992 году и является одним из ведущих вузов "
+        "Узбекистана, готовящих специалистов в области международных отношений, международного права и мировой "
+        "экономики. Через этот портал студенты просматривают свои дисциплины, расписание и оценки, а администрация "
+        "управляет учебным процессом.",
+        "The University of World Economy and Diplomacy (UWED), founded in 1992, is one of Uzbekistan’s leading "
+        "universities, training specialists in international relations, international law and the world economy. "
+        "Through this portal students view their courses, timetable and grades, while the administration manages "
+        "the academic process.",
+    ),
+    "fact_founded": ("Tashkil etilgan", "Год основания", "Founded"),
+    "fact_faculties": ("Fakultetlar", "Факультеты", "Faculties"),
+    "fact_semesters": ("Semestrlar", "Семестры", "Semesters"),
+    "fact_languages": ("O‘qitiladigan chet tillari", "Изучаемые иностранные языки", "Foreign languages taught"),
+    "faculties_title": ("Fakultetlar", "Факультеты", "Faculties"),
+    "portal_features": ("Portal imkoniyatlari", "Возможности портала", "Portal features"),
+    "feat_schedule": ("Haftalik dars jadvali va xonalar", "Недельное расписание и аудитории", "Weekly timetable and rooms"),
+    "feat_grades": ("Baholar: 100 ballik, harfli va 5 ballik tizimda", "Оценки: 100-балльная, буквенная и 5-балльная системы",
+                    "Grades on 100-point, letter and 5-point scales"),
+    "feat_curriculum": ("8 semestrlik o‘quv reja, majburiy va tanlov fanlari",
+                        "Учебный план на 8 семестров, обязательные и элективные дисциплины",
+                        "8-semester curriculum with core and elective courses"),
+    "feat_admin": ("Ma’muriyat uchun boshqaruv paneli", "Панель управления для администрации", "Management panel for administrators"),
+
+    # ---- Kirish
+    "login_title": ("Tizimga kirish", "Вход в систему", "Sign in"),
+    "login_sub": ("Login va parolingizni kiriting", "Введите логин и пароль", "Enter your username and password"),
+    "login_role": ("Kirish turi", "Тип входа", "Account type"),
+    "role_student": ("Talaba", "Студент", "Student"),
+    "role_admin": ("Administrator", "Администратор", "Administrator"),
+    "username": ("Login", "Логин", "Username"),
+    "password": ("Parol", "Пароль", "Password"),
+    "login_btn": ("Kirish", "Войти", "Sign in"),
+    "login_empty": ("Login va parolni kiriting.", "Введите логин и пароль.", "Please enter your username and password."),
+    "login_error": ("Login, parol yoki kirish turi noto‘g‘ri.", "Неверный логин, пароль или тип входа.",
+                    "Incorrect username, password or account type."),
+    "demo_creds": ("Demo kirish ma’lumotlari", "Демо-данные для входа", "Demo credentials"),
+    "contact_title": ("Aloqa", "Контакты", "Contact"),
+    "demo_notice": (
+        "Bu namoyish platformasi. Talabalar, guruhlar, xonalar, jadval va baholar namuna ma’lumotlaridir va universitetning rasmiy ma’lumotlari emas.",
+        "Это демонстрационная платформа. Студенты, группы, аудитории, расписание и оценки — примерные данные, а не официальные сведения университета.",
+        "This is a demonstration platform. Students, groups, rooms, timetable and grades are sample data, not official university records.",
+    ),
+
+    # ---- Navigatsiya
+    "nav_admin": ("Boshqaruv", "Управление", "Administration"),
+    "nav_student": ("Shaxsiy kabinet", "Личный кабинет", "My account"),
+    "logout": ("Chiqish", "Выйти", "Sign out"),
+    "p_dashboard": ("Bosh sahifa", "Главная", "Dashboard"),
+    "p_my_courses": ("Mening fanlarim", "Мои дисциплины", "My courses"),
+    "p_schedule": ("Dars jadvali", "Расписание", "Timetable"),
+    "p_grades": ("Baholar", "Оценки", "Grades"),
+    "p_curriculum": ("O‘quv reja", "Учебный план", "Curriculum"),
+    "p_overview": ("Umumiy ko‘rinish", "Обзор", "Overview"),
+    "p_students": ("Talabalar", "Студенты", "Students"),
+    "p_courses": ("Fanlar va o‘quv reja", "Дисциплины и учебный план", "Courses & curriculum"),
+    "p_rooms": ("Xonalar", "Аудитории", "Rooms"),
+    "p_grades_admin": ("Baholar", "Оценки", "Grades"),
+
+    # ---- Umumiy maydonlar
+    "faculty": ("Fakultet", "Факультет", "Faculty"),
+    "program": ("Ta’lim yo‘nalishi", "Направление обучения", "Degree programme"),
+    "year": ("Kurs", "Курс", "Year"),
+    "year_n": ("{n}-kurs", "{n} курс", "Year {n}"),
+    "group": ("Guruh", "Группа", "Group"),
+    "semester": ("Semestr", "Семестр", "Semester"),
+    "semester_n": ("{n}-semestr", "{n} семестр", "Semester {n}"),
+    "course": ("Fan", "Дисциплина", "Course"),
+    "score": ("Ball", "Балл", "Score"),
+    "letter": ("Harfli baho", "Буквенная оценка", "Letter grade"),
+    "grade5": ("5 ballik baho", "Оценка (5-балльная)", "Grade (5-point)"),
+    "updated": ("Yangilangan", "Обновлено", "Updated"),
+    "kind": ("Fan turi", "Тип дисциплины", "Course type"),
+    "module": ("Modul", "Модуль", "Module"),
+    "core": ("Majburiy", "Обязательные", "Core"),
+    "elective": ("Tanlov fani", "Дисциплина по выбору", "Elective"),
+    "total": ("Jami", "Всего", "Total"),
+    "full_name": ("F.I.Sh.", "Ф.И.О.", "Full name"),
+    "student_id": ("Talaba ID", "ID студента", "Student ID"),
+    "teacher": ("O‘qituvchi", "Преподаватель", "Lecturer"),
+    "room": ("Xona", "Аудитория", "Room"),
+    "day": ("Kun", "День", "Day"),
+    "time": ("Vaqt", "Время", "Time"),
+    "start": ("Boshlanish", "Начало", "Start"),
+    "end": ("Tugash", "Конец", "End"),
+    "today": ("Bugun", "Сегодня", "Today"),
+    "fill_all": ("Barcha majburiy maydonlarni to‘ldiring.", "Заполните все обязательные поля.", "Please fill in all required fields."),
+
+    # ---- Talaba sahifalari
+    "welcome": ("Xush kelibsiz, {name}!", "Добро пожаловать, {name}!", "Welcome, {name}!"),
+    "enrolled_courses": ("Ro‘yxatdagi fanlar", "Записан на дисциплины", "Enrolled courses"),
+    "avg_score": ("O‘rtacha ball (100)", "Средний балл (100)", "Average score (100)"),
+    "avg_national": ("O‘rtacha baho (5)", "Средняя оценка (5)", "Average grade (5)"),
+    "weekly_lessons": ("Haftalik darslar", "Занятий в неделю", "Classes per week"),
+    "today_lessons": ("Bugungi darslar", "Занятия сегодня", "Today’s classes"),
+    "no_lessons_today": ("Bugun darslar yo‘q.", "Сегодня занятий нет.", "No classes today."),
+    "student_demo_info": ("Baholar va jadval demo ma’lumotlari. Yakuniy ma’lumotlarni administrator kiritadi.",
+                          "Оценки и расписание — демо-данные. Итоговые данные вносит администратор.",
+                          "Grades and timetable are demo data. Final records are entered by the administrator."),
+    "no_courses_sem": ("Bu semestr uchun fanlar hali biriktirilmagan.", "На этот семестр дисциплины ещё не назначены.",
+                       "No courses assigned for this semester yet."),
+    "choose_elective": ("Tanlov fanini tanlash", "Выбор дисциплины по выбору", "Choose an elective"),
+    "add_to_plan": ("Fanni rejamga qo‘shish", "Добавить в мой план", "Add to my plan"),
+    "course_added": ("Fan qo‘shildi.", "Дисциплина добавлена.", "Course added."),
+    "no_electives": ("Ushbu semestrda tanlash mumkin bo‘lgan tanlov fanlari yo‘q.",
+                     "В этом семестре нет доступных дисциплин по выбору.",
+                     "No electives available for this semester."),
+    "group_label": ("Guruh: {group}", "Группа: {group}", "Group: {group}"),
+    "no_schedule": ("Guruhingiz uchun jadval hali tuzilmagan.", "Расписание для вашей группы ещё не составлено.",
+                    "No timetable has been created for your group yet."),
+    "graded_courses": ("Baholangan fanlar", "Оценённые дисциплины", "Graded courses"),
+    "no_grades": ("Hozircha baholar kiritilmagan.", "Оценки пока не выставлены.", "No grades yet."),
+    "grade_scale_note": (
+        "5 ballik tizim: 86–100 → 5 (a’lo), 71–85 → 4 (yaxshi), 55–70 → 3 (qoniqarli), 0–54 → 2 (qoniqarsiz).",
+        "5-балльная система: 86–100 → 5 (отлично), 71–85 → 4 (хорошо), 55–70 → 3 (удовл.), 0–54 → 2 (неудовл.).",
+        "5-point scale: 86–100 → 5 (excellent), 71–85 → 4 (good), 55–70 → 3 (satisfactory), 0–54 → 2 (fail).",
+    ),
+    "curriculum_sub": ("1–8-semestr · bakalavriat", "1–8 семестры · бакалавриат", "Semesters 1–8 · Bachelor’s"),
+    "n_courses": ("{n} ta fan", "дисциплин: {n}", "{n} courses"),
+
+    # ---- Administrator
+    "admin_panel": ("Administrator paneli", "Панель администратора", "Administrator dashboard"),
+    "stat_students": ("Talabalar", "Студенты", "Students"),
+    "stat_courses": ("O‘quv fanlari", "Дисциплины", "Courses"),
+    "stat_rooms": ("Xonalar", "Аудитории", "Rooms"),
+    "stat_schedule": ("Jadval yozuvlari", "Записи расписания", "Timetable entries"),
+    "stat_grades": ("Kiritilgan baholar", "Выставлено оценок", "Grades entered"),
+    "curriculum_by_sem": ("O‘quv reja semestrlar bo‘yicha", "Учебный план по семестрам", "Curriculum by semester"),
+    "admin_warning": (
+        "Demo muhit: kiritilgan barcha ma’lumotlar sinov uchun. Haqiqiy talabalar ma’lumotlarini joylashdan oldin xavfsizlik sozlamalarini kuchaytiring va demo parollarni almashtiring.",
+        "Демо-среда: все данные тестовые. Перед загрузкой реальных данных студентов усильте безопасность и смените демо-пароли.",
+        "Demo environment: all data is for testing. Strengthen security and change the demo passwords before loading real student data.",
+    ),
+    "add_student": ("Yangi talaba qo‘shish", "Добавить студента", "Add a new student"),
+    "temp_password": ("Vaqtinchalik parol", "Временный пароль", "Temporary password"),
+    "password_rule": ("Parol kamida 6 belgidan iborat bo‘lishi kerak.", "Пароль должен содержать не менее 6 символов.",
+                      "Password must be at least 6 characters long."),
+    "create_student": ("Talabani yaratish", "Создать студента", "Create student"),
+    "student_exists": ("Bunday login yoki talaba ID allaqachon mavjud.", "Такой логин или ID студента уже существует.",
+                       "That username or student ID already exists."),
+    "student_created": ("Talaba yaratildi.", "Студент создан.", "Student created."),
+    "add_course": ("Yangi fan qo‘shish", "Добавить дисциплину", "Add a new course"),
+    "course_name_uz": ("Fan nomi (o‘zbekcha) *", "Название (на узбекском) *", "Course name (Uzbek) *"),
+    "course_name_ru": ("Fan nomi (ruscha)", "Название (на русском)", "Course name (Russian)"),
+    "course_name_en": ("Fan nomi (inglizcha)", "Название (на английском)", "Course name (English)"),
+    "module_optional": ("Modul (ixtiyoriy)", "Модуль (необязательно)", "Module (optional)"),
+    "add_course_btn": ("Fan qo‘shish", "Добавить дисциплину", "Add course"),
+    "course_created": ("Fan qo‘shildi.", "Дисциплина добавлена.", "Course added."),
+    "course_name_required": ("Fan nomini kiriting.", "Введите название дисциплины.", "Please enter the course name."),
+    "room_code": ("Xona kodi", "Код аудитории", "Room code"),
+    "building": ("Bino", "Корпус", "Building"),
+    "room_type": ("Xona turi", "Тип аудитории", "Room type"),
+    "capacity": ("Sig‘imi", "Вместимость", "Capacity"),
+    "add_room": ("Yangi xona qo‘shish", "Добавить аудиторию", "Add a new room"),
+    "add_room_btn": ("Xona qo‘shish", "Добавить аудиторию", "Add room"),
+    "room_exists": ("Bunday kodli xona allaqachon mavjud.", "Аудитория с таким кодом уже существует.",
+                    "A room with this code already exists."),
+    "room_created": ("Xona qo‘shildi.", "Аудитория добавлена.", "Room added."),
+    "schedule_manage": ("Dars jadvalini boshqarish", "Управление расписанием", "Manage timetable"),
+    "add_to_schedule": ("Jadvalga qo‘shish", "Добавить в расписание", "Add to timetable"),
+    "need_course_room": ("Avval fan va xona yarating.", "Сначала создайте дисциплину и аудиторию.",
+                         "Create a course and a room first."),
+    "time_order": ("Tugash vaqti boshlanish vaqtidan keyin bo‘lishi kerak.", "Время окончания должно быть позже начала.",
+                   "End time must be after start time."),
+    "clash": ("Vaqt to‘qnashuvi: bu vaqtda {group} guruhi yoki {room} xonasi band.",
+              "Конфликт: в это время занята группа {group} или аудитория {room}.",
+              "Conflict: group {group} or room {room} is already booked at this time."),
+    "schedule_added": ("Dars jadvalga qo‘shildi.", "Занятие добавлено в расписание.", "Class added to the timetable."),
+    "delete_entry": ("Jadval yozuvini o‘chirish", "Удалить запись расписания", "Delete a timetable entry"),
+    "entry": ("Yozuv", "Запись", "Entry"),
+    "delete": ("O‘chirish", "Удалить", "Delete"),
+    "grades_manage": ("Talaba baholarini boshqarish", "Управление оценками студентов", "Manage student grades"),
+    "no_students": ("Hali talabalar qo‘shilmagan.", "Студенты ещё не добавлены.", "No students added yet."),
+    "score_range": ("Ball (0–100)", "Балл (0–100)", "Score (0–100)"),
+    "save_grade": ("Bahoni saqlash", "Сохранить оценку", "Save grade"),
+    "grade_saved": ("Baho saqlandi.", "Оценка сохранена.", "Grade saved."),
+}
+
+
+def tr(key, lang, **kw):
+    entry = _T.get(key)
+    if entry is None:
+        return key
+    text = entry[_IDX.get(lang, 0)]
+    return text.format(**kw) if kw else text
