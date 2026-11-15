@@ -3,6 +3,16 @@
 Jahon iqtisodiyoti va diplomatiya universiteti (JIDU / УМЭД / UWED) uchun demo talaba kabineti va administrator paneli.
 Interfeys 3 tilda: **o‘zbek**, **rus** va **ingliz** (sahifaning yuqori o‘ng burchagidagi tugmalar orqali almashtiriladi).
 
+## 🌐 Onlayn sayt
+
+**https://jidu-university-demo.streamlit.app/**
+
+Til havolalari: [O‘zbekcha](https://jidu-university-demo.streamlit.app/?lang=uz) ·
+[Русский](https://jidu-university-demo.streamlit.app/?lang=ru) ·
+[English](https://jidu-university-demo.streamlit.app/?lang=en)
+
+> Sayt uzoq vaqt ochilmasa “uyqu” rejimiga o‘tadi — “Yes, get this app back up!” tugmasini bosing, ~30 soniyada ishga tushadi.
+
 ## Ishga tushirish (Windows / VS Code)
 
 1. Loyiha papkasini VS Code’da oching va terminalni oching (`Ctrl + ~`).
